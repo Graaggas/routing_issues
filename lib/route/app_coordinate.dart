@@ -1,5 +1,4 @@
 import 'package:route_issue/screens/otp_screen/otp_screen.dart';
-import 'package:route_issue/screens/otp_screen/otp_screen_wm.dart';
 
 import 'coordinate.dart';
 import '../screens/init_screen/init_screen.dart';
@@ -20,5 +19,5 @@ class AppCoordinate implements Coordinate {
 
 final Map<AppCoordinate, CoordinateBuilder> appCoordinates = {
   AppCoordinate.initScreen: (_, __) => const InitScreen(),
-  AppCoordinate.otpScreen: (_, __) => const OtpScreen(wmFactory: createWM),
+  AppCoordinate.otpScreen: (_, __) => OtpScreen(),
 };

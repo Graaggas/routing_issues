@@ -1,19 +1,25 @@
-import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:otp_autofill/otp_autofill.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:route_issue/screens/otp_screen/otp_screen_wm.dart';
 
-class OtpScreen extends ElementaryWidget<OtpScreenWM> {
-  const OtpScreen({
-    Key? key,
-    required WidgetModelFactory<OtpScreenWM> wmFactory,
-  }) : super(wmFactory, key: key);
+class OtpScreen extends StatefulWidget {
+  OtpScreen({Key? key}) : super(key: key);
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final otpFieldController = OTPTextEditController(codeLength: 6);
+  final otpFieldFocusNode = FocusNode();
 
   @override
-  Widget build(OtpScreenWM wm) {
+  State<OtpScreen> createState() => _OtpScreenState();
+}
+
+class _OtpScreenState extends State<OtpScreen> {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      key: wm.scaffoldKey,
+      key: widget.scaffoldKey,
       body: SafeArea(
         child: Center(
             child: SingleChildScrollView(
@@ -28,15 +34,17 @@ class OtpScreen extends ElementaryWidget<OtpScreenWM> {
                 animationCurve: Curves.easeOut,
                 hintCharacter: '0',
                 animationDuration: Duration.zero,
-                appContext: wm.contextForPinCodeTextField,
+                appContext: context,
                 length: 6,
-                controller: wm.otpFieldController,
-                focusNode: wm.otpFieldFocusNode,
+                controller: widget.otpFieldController,
+                focusNode: widget.otpFieldFocusNode,
                 autoDisposeControllers: false,
                 onChanged: (_) {
                   return;
                 },
-                onCompleted: (_) => wm.onSubmit(),
+                onCompleted: (_) {
+                  return;
+                },
                 mainAxisAlignment: MainAxisAlignment.center,
                 animationType: AnimationType.none,
                 keyboardType: TextInputType.number,
