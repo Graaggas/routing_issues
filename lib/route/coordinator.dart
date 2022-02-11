@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'coordinate.dart';
-import 'init_screen.dart';
+import '../screens/init_screen/init_screen.dart';
 
 class _Route {
   final String path;

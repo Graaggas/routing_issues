@@ -1,8 +1,8 @@
-import 'package:route_issue/otp_screen.dart';
-import 'package:route_issue/otp_screen_wm.dart';
+import 'package:route_issue/screens/otp_screen/otp_screen.dart';
+import 'package:route_issue/screens/otp_screen/otp_screen_wm.dart';
 
 import 'coordinate.dart';
-import 'init_screen.dart';
+import '../screens/init_screen/init_screen.dart';
 
 class AppCoordinate implements Coordinate {
   static const initScreen = AppCoordinate._('init_screen');

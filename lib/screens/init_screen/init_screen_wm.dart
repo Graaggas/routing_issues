@@ -1,9 +1,9 @@
 import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
-import 'package:route_issue/app_coordinate.dart';
-import 'package:route_issue/coordinator.dart';
-import 'package:route_issue/di.dart';
-import 'package:route_issue/init_screen_model.dart';
+import 'package:route_issue/route/app_coordinate.dart';
+import 'package:route_issue/route/coordinator.dart';
+import 'package:route_issue/app/di.dart';
+import 'package:route_issue/screens/init_screen/init_screen_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'init_screen.dart';
 

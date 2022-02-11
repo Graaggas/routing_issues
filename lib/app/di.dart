@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'coordinator.dart';
+import '../route/coordinator.dart';
 
 final coordinatorProvider = ChangeNotifierProvider((_) => Coordinator());

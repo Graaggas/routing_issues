@@ -2,7 +2,7 @@ import 'package:elementary/elementary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:route_issue/otp_screen_wm.dart';
+import 'package:route_issue/screens/otp_screen/otp_screen_wm.dart';
 
 class OtpScreen extends ElementaryWidget<OtpScreenWM> {
   const OtpScreen({

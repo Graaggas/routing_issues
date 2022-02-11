@@ -2,10 +2,10 @@ import 'package:elementary/elementary.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:otp_autofill/otp_autofill.dart';
-import 'package:route_issue/otp_screen.dart';
-import 'package:route_issue/otp_screen_model.dart';
+import 'package:route_issue/screens/otp_screen/otp_screen.dart';
+import 'package:route_issue/screens/otp_screen/otp_screen_model.dart';
 
-import 'keyboard_display_listener.dart';
+import '../../utils/keyboard_display_listener.dart';
 
 class OtpScreenWM extends WidgetModel<OtpScreen, OtpScreenModel> {
   final TextEditingController otpFieldController;

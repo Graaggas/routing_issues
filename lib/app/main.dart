@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:route_issue/di.dart';
+import 'package:route_issue/app/di.dart';
 
-import 'app_coordinate.dart';
-import 'coordinator.dart';
-import 'my_route_delegate.dart';
-import 'my_route_info_parser.dart';
+import '../route/app_coordinate.dart';
+import '../route/coordinator.dart';
+import '../route/my_route_delegate.dart';
+import '../route/my_route_info_parser.dart';
 
 const _localizations = [Locale('en', 'PK')];
 const _localizationsDelegates = [
