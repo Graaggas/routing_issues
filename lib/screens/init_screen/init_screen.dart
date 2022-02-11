@@ -14,7 +14,11 @@ class _InitScreenState extends State<InitScreen> {
   @override
   Widget build(BuildContext context) {
     final _coordinator = context.read(coordinatorProvider);
-    _coordinator.navigate(context, AppCoordinate.otpScreen);
+
+    Future.delayed(Duration.zero, () {
+      _coordinator.navigate(context, AppCoordinate.otpScreen);
+    });
+
     return Container();
   }
 }
